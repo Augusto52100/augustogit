@@ -1,39 +1,35 @@
 *{
-
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 body{
-    background-image: url("C:\Users\aluno\Pictures\o-que-existe-no-ponto-mais-profundo-do-oceano-atlantico-1730327887727_1280.webp");
+    background-image: url(o-que-existe-no-ponto-mais-profundo-do-oceano-atlantico-1730327887727_1280.webp);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     background-attachment: fixed;
-    background-color: rgba(255, 253, 253, 0.665)
-    
+    background-color: rgb(143, 162, 162);
 }
-.navbar
-{
-    background-color:black
-    color#ffffff;
+
+/* NAVBAR */
+.navbar{
+    background-color: #fff;
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3)
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-.navbar ul {
+.navbar ul{
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .navbar ul li a{
-    color: aqua;
+    color: black;
     text-decoration: none;
     padding: 10px 20px;
     display: block;
@@ -42,118 +38,134 @@ body{
 }
 
 .navbar ul li a:hover{
-    background-color: white;
-    color: #2c3e50;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    background-color: cadetblue;
     transform: translateY(-2px);
-    
 }
 
-.slider {
+/* INTRO */
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#D6F3F2;
+    padding: 20px 0; /* substitui margin */
+}
 
-    margin: 20px auto;
-    width: 800px;
+/* BOTÃO */
+.divbt{
+    display: flex;
+    justify-content: center;
+}
+
+.botaoprojetos{
+    color: black;
+    background-color: #D6F3F2;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.botaoprojetos:hover{
+    transform: translateY(-3px);
+}
+
+/* SLIDER */
+.slider{
+    width: 100%;
+    max-width: 800px;
     height: 400px;
+    margin: 20px auto 0 auto; /* remove espaço inferior */
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-
-
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
-.slider-content
-{
+
+.slider-content{
     width: 400%;
     height: 100%;
     display: flex;
-
 }
-.slider-content input
-{
+
+.slider-content input{
     display: none;
-
-
 }
-.slider-box
-{
+
+.slide-box{
     width: 25%;
     transition: 0.6s;
 }
-.slide-box img
-{
- width: 800px;
- height: 400px;
- object-fit: cover;
+
+.slide-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-#radio1:checked ~ .first { margin-left: 0;}
+/* MOVIMENTO */
+#radio1:checked ~ .first {margin-left: 0%}
+#radio2:checked ~ .first {margin-left: -25%}
+#radio3:checked ~ .first {margin-left: -50%}
+#radio4:checked ~ .first {margin-left: -75%}
 
-#radio2:checked ~ .first { margin-left: -25%;}
-
-#radio3:checked ~ .first { margin-left: -50%;}
-
-#radio4:checked ~ .first { margin-left: -75%;}
-
-.nav-manual
-{
+/* BOTÕES DO SLIDER */
+.nav-manual{
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    bottom: 15px;
+    width: 100%;
     display: flex;
     justify-content: center;
-
 }
-.manual-btn
-{
+
+.manual-btn{
     border: 2px solid white;
     padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: 0.3s;
-
-
+    border-radius: 50%;
+    cursor:pointer;
+    margin: 0 5px;
+    transition:0.3s;
 }
+
 .manual-btn:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: white;
 }
 
+/* RODAPÉ */
 .rodape-principal{
-    background-color: #000000;
-    color:white;
-    padding :   40px 0 20px 0;
-    margin-top : 50px; /afartar da galeria/
+    background-color:#D6F3F2;
+    padding: 30px 0 10px 0;
+    margin-top: 20px; /* reduzido */
 }
-
 
 .container-rodape{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* FAZ OS ITENS PULAREM LINHAS EM TELAS PEQUENAS */
+    flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto; /* centralizar o conteiner rotape */
+    margin: 0 auto;
 }
 
-.links-socias a{
-    color: white;
+.links-sociais a{
+    color: black;
     text-decoration: none;
-    margin: 0 15px; /* ESPAÇAMENTO ENTRE OS LINKS */
-    font-size: bold;
+    margin: 0 10px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-
-.links-socias a:hover{
-    color: #3498db;
-    text-shadow: 0 0 5px(255,255,255, 0,5);
+.links-sociais a:hover{
+    color: gray;
 }
 
-.rotape-inferior{
+.rodape-inferior{
     text-align: center;
-    border-top: 1px solid rgba (255,255,255,0.2);
-    margin-top: 30px;
-    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 15px;
+    padding-top: 10px;
     font-size: 12px;
-    opacity: 0.6;
-
+    opacity: 0.7;
 }
